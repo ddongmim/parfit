@@ -1,4 +1,3 @@
-[Uploading parfit_전시_안내_감정_컬러_가이드_qr_페이지.html…]()
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -28,18 +27,35 @@
   .muted{color:var(--muted)}
   .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px dashed #334; color:#b9c3d1; font-size:12px}
   .swatch{border-radius:12px;border:1px solid #2a3140;overflow:hidden}
-  .swatch .bar{height:36px}
+  .swatch .bar{height:56px}
   .swatch .row{display:flex;gap:10px;align-items:center;padding:9px 10px}
   .dot{width:12px;height:12px;border-radius:50%;border:1px solid rgba(255,255,255,0.4)}
   .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:#cfe3ff;background:#0e1420;border:1px solid #233046;border-radius:10px;padding:2px 6px}
   .table{display:grid;grid-template-columns:170px 1fr;gap:12px;margin-top:6px}
   .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid #2a3140;background:#161a22;color:#d6deea;font-size:12px}
-  .emoji{font-size:20px;margin-right:6px}
+  .emoji{font-size:clamp(28px,6vw,48px);line-height:1;margin-right:8px}
   details{border:1px solid #2a3140;border-radius:14px;overflow:hidden}
   summary{cursor:pointer;padding:14px 16px;background:#121722;color:#dfe4ee;font-weight:600}
   details .inner{padding:14px 16px}
   footer{margin:26px 0 60px;color:#7f8a9b;text-align:center}
   .hint{font-size:12px;color:#8ea3ba}
+  /* 모바일 가독성 & 그라데이션 가시성 향상 */
+  html,body{word-break:keep-all;-webkit-text-size-adjust:100%}
+  h1{font-size:clamp(22px,5.5vw,28px)}
+  h2{font-size:clamp(18px,4.6vw,22px)}
+  p,.pill,.chip,.code,.hint{font-size:clamp(12px,3.6vw,14px)}
+  .wrap{padding:0 16px}
+  .card{border:1px solid #2b3344;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03))}
+  .swatch{background:#0f1522}
+  .dot{width:14px;height:14px}
+  .step .num{flex:0 0 28px;height:28px}
+  .table{grid-template-columns:170px 1fr}
+  @media (max-width:760px){
+    .table{grid-template-columns:1fr;gap:8px}
+    .swatch{margin-top:-4px}
+    .grid{grid-template-columns:1fr}
+    .swatch .row{flex-wrap:wrap}
+  }
 </style>
 </head>
 <body>
